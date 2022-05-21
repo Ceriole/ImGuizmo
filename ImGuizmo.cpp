@@ -732,11 +732,11 @@ namespace IMGUIZMO_NAMESPACE
    static Context gContext;
 
    static const vec_t directionUnary[3] = { makeVect(1.f, 0.f, 0.f), makeVect(0.f, 1.f, 0.f), makeVect(0.f, 0.f, 1.f) };
-   static const ImU32 directionColor[3] = { IM_COL32(0xFF, 0x71, 0x5E, 0xD8), IM_COL32(0xFF, 0x25, 0xAA, 0x25), IM_COL32(0xFF, 0xCC, 0x53, 0X2C) };
+   static const ImU32 directionColor[3] = { IM_COL32(0x71, 0x5E, 0xD8, 0xFF), IM_COL32(0x25, 0xAA, 0x25, 0xFF), IM_COL32(0xCC, 0x53, 0X2C, 0xFF) };
 
    // Alpha: 100%: FF, 87%: DE, 70%: B3, 54%: 8A, 50%: 80, 38%: 61, 12%: 1F
-   static const ImU32 planeColor[3] = { IM_COL32(0xFF, 0x7A, 0x68, 0xD8), IM_COL32(0xFF, 0x55, 0xAB, 0x55), IM_COL32(0xFF, 0xD9, 0x67, 0x42) };
-   static const ImU32 selectionColor = IM_COL32(0xFF, 0x20, 0xAA, 0xCC);
+   static const ImU32 planeColor[3] = { IM_COL32(0x7A, 0x68, 0xD8, 0xFF), IM_COL32(0x55, 0xAB, 0x55, 0xFF), IM_COL32(0xD9, 0x67, 0x42, 0xFF) };
+   static const ImU32 selectionColor = IM_COL32(0x20, 0xAA, 0xCC, 0xFF);
    static const ImU32 inactiveColor = IM_COL32(0x99, 0x99, 0x99, 0x99);
    static const ImU32 translationLineColor = IM_COL32(0xAA, 0xAA, 0xAA, 0xAA);
    static const char* translationInfoMask[] = { "X : %5.3f", "Y : %5.3f", "Z : %5.3f",
@@ -1310,7 +1310,7 @@ namespace IMGUIZMO_NAMESPACE
       }
 
       constexpr float lineThickness = 6.0f;
-	   constexpr float circleSize = 12.0f;
+	  constexpr float circleSize = 12.0f;
       for (int i = 0; i < 3; i++)
       {
          if(!Intersects(op, static_cast<OPERATION>(SCALE_X << i)))
@@ -1397,7 +1397,7 @@ namespace IMGUIZMO_NAMESPACE
       }
 
       constexpr float lineThickness = 6.0f;
-	   constexpr float circleSize = 12.0f;
+	  constexpr float circleSize = 12.0f;
       for (int i = 0; i < 3; i++)
       {
          if (!Intersects(op, static_cast<OPERATION>(SCALE_XU << i)))
